@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.old_standard_tt{
+  font-family: var(--font-oldstandard);
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.drop-cap::first-letter {
+  float: left;
+  font-size: 5em; /* Adjust the size as needed */
+  line-height: 0.5;
+
+  margin-right: 0.1em;
+  margin-top: 0.1em;
+  font-size: 5em; /* Adjust the size as needed */
+  line-height: 0.5;
+  font-family: var(--font-oldstandard);
+  font-weight: bold;
+}
+hr{
+  border-width: 1.5px;
+  opacity: 0.7;
+}
+.Box {
+
+  background-color: rgba(0, 0, 0, 0.82); /* Semi-transparent background for the Box */
+
+
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: multiply; /* Allows cutout text effect */
+  border-radius: 3px;
+  color: #fff; /* Simplified color declaration */
+  transition: 0.5s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added box-shadow for better visibility */
+}
+
+
+h1{
+  scale:1.05;
+  transition: 1s;
+}
+.mimg:hover{
+  scale: 1.015;
+}
+img{
+  scale:1.05;
+}
+
+.mimg{
+  scale:1;
+  transition: 0.5s;
+}
+h3:hover{
+  scale: 1.025;
+}
+
+h3{
+  transition: 0.5s;
+}
+
+.Box:hover {
+  scale:1.025;
+}
+.Box2 {
+
+
+
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  border: 5px rgba(0, 0, 0, 0.794) double;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added box-shadow for better visibility */
+}
+h3{
+  color: rgb(255, 255, 255);
+  font-family: var(--font-oldstandard);
+  font-weight: bolder;
+}
+.Button {
+  border: 6px dashed white; /* Button border */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: rgba(0, 0, 0, 0.82);
+  mix-blend-mode: multiply;
+  transition: 0.5s;
+
+  /* Continuous scaling animation */
+  animation: pulse 2s infinite;
+}
+
+.Button:hover {
+  scale:1.05;
+  animation: none;
+}
+
+/* Keyframes for continuous scaling */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* Add a media query to apply padding when width is greater than height */
+/* Add a media query to apply padding when width is greater than height */
+@media (min-aspect-ratio: 1/1) {
+  .content-wrapper {
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+  }
+}
+
+
